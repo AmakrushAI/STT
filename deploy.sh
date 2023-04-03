@@ -24,7 +24,8 @@ cmake .. -DFL_TEXT_BUILD_TESTS=OFF
 make -j$(nproc)
 make test
 sudo make install 
-
+cd ..
+cd ..
 
 mkdir data && cd data
 wget https://indic-asr-public.objectstore.e2enetworks.net/aaai_ckpts/models/or/or.pt
