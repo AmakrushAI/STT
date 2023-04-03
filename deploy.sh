@@ -6,6 +6,7 @@ pip3 install packaging  soundfile  swifter  joblib==1.0.0  indic-nlp-library tqd
 git clone https://github.com/AI4Bharat/fairseq.git
 pip3 install --editable fairseq/./
 pip3 install  install flask flask-cors flask_sockets pydub webrtcvad nltk langdetect simpletransformers flashlight-text protobuf==3.20.1
+pip3 install gunicorn
 
 git clone https://github.com/kpu/kenlm
 cd kenlm
@@ -37,7 +38,7 @@ cd ..
 cd ..
 git clone https://github.com/AI4Bharat/IndicWav2Vec.git
 cp models_info.json IndicWav2Vec/ULCA_Compliance/app/
-cp flask_api IndicWav2Vec/ULCA_Compliance/app/
+cp flask_api.py IndicWav2Vec/ULCA_Compliance/app/
 cp support.py IndicWav2Vec/ULCA_Compliance/app/
 cd IndicWav2Vec/ULCA_Compliance/app/
 gunicorn flask_api:app --workers 5 --timeout 600
